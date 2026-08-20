@@ -25,8 +25,27 @@
       <li><strong>Shared mailboxes are read-only</strong> &mdash; tracking works, but flagging, drafts, and sending are off.</li>
       <li>Run the skill in <strong>your own chat</strong> so it connects to your own mailbox &mdash; don&rsquo;t pass a finished tracker around.</li>
     </ul>
-    <div class="calloutgrid">
-      <div class="callout tip"><span class="lbl">Want it different? Just ask</span>Tweak it in the same chat &mdash; &ldquo;only show emails from Jeff,&rdquo; &ldquo;only <code>@somecompany.com</code>,&rdquo; &ldquo;filter for &lsquo;renewal&rsquo; in the subject,&rdquo; &ldquo;hide the newsletters,&rdquo; or &ldquo;change follow-up to 3 days.&rdquo;</div>
-      <div class="callout warn"><span class="lbl">Something look wrong?</span>If an email shows as awaiting a reply when it was answered, mention the <strong>subject line</strong> &mdash; a known edge case with a quick fix. If flags sit on &ldquo;checking&hellip;&rdquo; a long time, say so.</div>
-    </div>
-  
+        <h3>What you can customize</h3>
+    <p>Just ask in the same chat. Some tweaks are instant, a few cost a bit more, and a couple can&rsquo;t change.</p>
+    <p><strong>Free &mdash; instant</strong> (everything&rsquo;s already loaded):</p>
+    <ul>
+      <li>Filter by <strong>sender or domain</strong> &mdash; only mail from one person or <code>@company.com</code>.</li>
+      <li>Filter by <strong>keyword</strong> in the subject or the preview snippet.</li>
+      <li><strong>Exclude noise</strong> &mdash; a specific sender, newsletters, internal-only threads.</li>
+      <li>Any combination of those, plus the existing search box and date range.</li>
+    </ul>
+    <p><strong>Costs a bit more</strong> (extra fetches per message, so slower over a large set):</p>
+    <ul>
+      <li>Filtering on the <strong>full message body</strong>, beyond the preview snippet.</li>
+      <li>Filtering by other <strong>Outlook categories / labels</strong> besides the flag.</li>
+      <li>Pulling from a <strong>different folder</strong> than Inbox / Sent.</li>
+    </ul>
+    <p><strong>Structural tweaks, any time:</strong></p>
+    <ul>
+      <li>The <strong>default lookback window</strong> (currently 14 days fast, filling to 30 in the background).</li>
+      <li>The <strong>follow-up threshold</strong> (currently 5 business days before a sent item is flagged &ldquo;needs follow-up&rdquo;).</li>
+      <li>Colors / theme, adding or removing a tab, and the <strong>tone</strong> of the AI-drafted replies and follow-ups.</li>
+      <li>Switching a flow from <strong>draft-only to auto-send</strong> &mdash; Claude confirms this one explicitly, since it skips your review.</li>
+    </ul>
+    <p><strong>What can&rsquo;t change:</strong> Outlook&rsquo;s rate limits, and the fact that flags/categories aren&rsquo;t returned by the fast list endpoint &mdash; that&rsquo;s why flag checks happen as you scroll rather than all at once.</p>
+    <div class="callout warn"><span class="lbl">Something look wrong?</span>If an email shows as awaiting a reply when it was answered, mention the <strong>subject line</strong> &mdash; a known edge case with a quick fix. If flags sit on &ldquo;checking&hellip;&rdquo; a long time, say so.</div>
