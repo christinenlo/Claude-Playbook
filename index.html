@@ -355,6 +355,11 @@ nav a.nav-head .nicon { width:14px; height:14px; }
 .clog-older > summary:hover { border-color:var(--accent); }
 .clog-older[open] > summary { margin-bottom:0; }
 @media (max-width:760px){ .clog { flex-direction:column; gap:0; } .clog-date { padding-top:10px; } .clog-body { padding-top:6px; } .clog-body::before { top:12px; } .clog-older > summary { margin-left:0; } }
+
+/* stop the scroll 'bounce' in Teams/Edge that pulled the page down and showed white behind it */
+html { background:var(--bg); overscroll-behavior:none; }
+body { overscroll-behavior:none; }
+nav { overscroll-behavior:contain; }
 </style>
 </head>
 <body>
